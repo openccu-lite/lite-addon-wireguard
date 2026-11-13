@@ -5,7 +5,7 @@
 > **Requires openccu-lite 1.1.0-dev.6 or later** (the system's web ingress). On openccu-lite 1.0.0 the addon cannot be
 > installed; the manifest names the minimum (`requires.lite`).
 
-**WireGuard remote access** to an [openccu-lite](https://github.com/hobbyquaker/openccu-lite) system: a phone or
+**WireGuard remote access** to an [openccu-lite](https://github.com/openccu-lite/openccu-lite) system: a phone or
 laptop reaches the user interface, the APIs and the addon pages from anywhere - and nothing else. WireGuard runs in
 userspace inside the addon (wireguard-go with its own network stack): no kernel interface, no privilege, no root. The
 tunnel ends inside the addon, which hands the devices' web requests to the web server through the system's **web
@@ -42,7 +42,7 @@ Needs openccu-lite **1.1.0-dev.6 or newer** (the system's web ingress; on an old
 cannot be reached through the ingress).
 
 1. Install the package `wireguard-<arch>-<version>.tar.gz` from the
-   [releases page](https://github.com/hobbyquaker/lite-addon-wireguard/releases) through the system's Addons page.
+   [releases page](https://github.com/openccu-lite/lite-addon-wireguard/releases) through the system's Addons page.
 2. On the Addons page, switch the **port switch** under this addon on: it opens UDP 51820 on the system's firewall.
 3. On the **router**, add a port forward of UDP 51820 to the system's LAN address (FRITZ!Box: Internet → Permit Access
    → Port Sharing). Behind DS-Lite or without a public IPv4 this does not work; a later client mode is meant for that.

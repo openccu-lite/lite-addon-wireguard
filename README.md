@@ -5,7 +5,7 @@
 > **Benötigt openccu-lite 1.1.0-dev.6 oder neuer** (den Web-Eingang des Systems). Mit openccu-lite 1.0.0 lässt sich das
 > Addon nicht installieren; das Manifest nennt die Mindestversion (`requires.lite`).
 
-**WireGuard-Fernzugriff** auf ein [openccu-lite](https://github.com/hobbyquaker/openccu-lite)-System: Telefon oder
+**WireGuard-Fernzugriff** auf ein [openccu-lite](https://github.com/openccu-lite/openccu-lite)-System: Telefon oder
 Laptop erreichen von unterwegs die Oberfläche, die APIs und die Addon-Seiten – und sonst nichts. WireGuard läuft im
 Userspace im Addon selbst (wireguard-go mit einem eigenen Netzwerkstack): keine Kernel-Schnittstelle, kein Zusatzrecht,
 kein Root. Der Tunnel endet im Addon, das die Web-Anfragen der Geräte über den **Web-Eingang des Systems** an den
@@ -43,7 +43,7 @@ Braucht openccu-lite **1.1.0-dev.6 oder neuer** (den Web-Eingang des Systems; au
 dass der Webserver über den Eingang nicht erreichbar ist).
 
 1. Das Paket `wireguard-<arch>-<version>.tar.gz` von der
-   [Releases-Seite](https://github.com/hobbyquaker/lite-addon-wireguard/releases) über die Addons-Seite des Systems
+   [Releases-Seite](https://github.com/openccu-lite/lite-addon-wireguard/releases) über die Addons-Seite des Systems
    installieren.
 2. Auf der Addons-Seite unter diesem Addon den **Port-Schalter** einschalten: Er öffnet UDP 51820 in der Firewall des
    Systems.

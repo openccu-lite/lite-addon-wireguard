@@ -7,9 +7,9 @@
     "en": "WireGuard remote access to this system: a phone or laptop reaches the user interface, the APIs and the addon pages from anywhere. WireGuard runs in userspace, with no kernel interface and no privilege; the tunnel ends inside the addon, which makes only the web server reachable. Devices are created on the page (a key made on the system with a QR code for the WireGuard app, or your own public key). One UDP port, closed by default; no outgoing connections."
   },
   "version": "0.2.0",
-  "homepage": "https://github.com/hobbyquaker/lite-addon-wireguard",
+  "homepage": "https://github.com/openccu-lite/lite-addon-wireguard",
   "licence": "MIT",
-  "changelog": "https://github.com/hobbyquaker/lite-addon-wireguard/blob/main/CHANGELOG.md",
+  "changelog": "https://github.com/openccu-lite/lite-addon-wireguard/blob/main/CHANGELOG.md",
   "release": {
     "github": "hobbyquaker/lite-addon-wireguard",
     "asset": "wireguard-{arch}-{version}.tar.gz"
