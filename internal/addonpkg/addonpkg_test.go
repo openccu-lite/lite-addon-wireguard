@@ -39,9 +39,8 @@ func TestManifest(t *testing.T) {
 	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
 		t.Error("the description and the note in both languages")
 	}
-	if !strings.Contains(m.Runtime.Note["en"], "51820") || !strings.Contains(m.Runtime.Note["en"], "10.77.1.0/24") {
-		t.Error("the note names the port and the ranges")
-	}
+	// the note is the catalogue's text for users (occulited task 188), no longer the technical account
+	// of scopes, ports and contacts; those are the manifest's keys
 	// the first build with the web ingress; the system compares by strict semver, so a release
 	// number would refuse the dev builds that carry it
 	if m.Requires.Lite != "1.1.0-dev.6" {
