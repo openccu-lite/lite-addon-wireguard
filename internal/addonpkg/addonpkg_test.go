@@ -36,11 +36,13 @@ func TestManifest(t *testing.T) {
 	if m.Runtime.WebIngress == nil || len(m.Runtime.WebIngress.Ranges) != 2 || m.Runtime.WebIngress.Ranges[0] != "10.77.0.0/24" || m.Runtime.WebIngress.Ranges[1] != "10.77.1.0/24" {
 		t.Errorf("web_ingress %+v", m.Runtime.WebIngress)
 	}
-	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
-		t.Error("the description and the note in both languages")
+	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Technical["de"] == "" || m.Runtime.Technical["en"] == "" ||
+		m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
+		t.Error("the description, the note and the technical text in both languages")
 	}
-	// the note is the catalogue's text for users (occulited task 188), no longer the technical account
-	// of scopes, ports and contacts; those are the manifest's keys
+	if !strings.Contains(m.Runtime.Technical["en"], "51820") || !strings.Contains(m.Runtime.Technical["en"], "10.77.1.0/24") {
+		t.Error("the technical text names the port and the ranges")
+	}
 	// the first build with the web ingress; the system compares by strict semver, so a release
 	// number would refuse the dev builds that carry it
 	if m.Requires.Lite != "1.1.0-dev.6" {
